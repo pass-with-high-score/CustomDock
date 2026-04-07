@@ -1,0 +1,9 @@
+Package: com.minh.customdock
+Name: CustomDock
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Làm trong suốt thanh Dock của iOS.
+Maintainer: Minh
+Author: Minh
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
