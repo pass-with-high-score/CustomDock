@@ -6,17 +6,278 @@
 	<string>CustomDock</string>
 	<key>items</key>
 	<array>
+		<!-- ======== GENERAL ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>General</string>
+		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>label</key>
-			<string>Bật Dock Trong Suốt</string>
+			<string>Enabled</string>
 			<key>key</key>
-			<string>isTransparentDockEnabled</string>
+			<string>enabled</string>
 			<key>defaults</key>
 			<string>com.minh.customdock</string>
 			<key>default</key>
 			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== DOCK BACKGROUND ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Dock Background</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Transparent Dock</string>
+			<key>key</key>
+			<string>transparentDock</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Hide Dock Completely</string>
+			<key>key</key>
+			<string>hideDock</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== CUSTOM COLOR ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Custom Color</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Enable Custom Color</string>
+			<key>key</key>
+			<string>customColorEnabled</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>label</key>
+			<string>Hex Color</string>
+			<key>key</key>
+			<string>dockColorHex</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<string>000000</string>
+			<key>placeholder</key>
+			<string>FF0000</string>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Color Opacity</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>key</key>
+			<string>dockColorAlpha</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<real>0.5</real>
+			<key>min</key>
+			<real>0</real>
+			<key>max</key>
+			<real>1</real>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== BLUR & SHAPE ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Blur Intensity</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>key</key>
+			<string>blurIntensity</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<real>1</real>
+			<key>min</key>
+			<real>0</real>
+			<key>max</key>
+			<real>1</real>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Corner Radius</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Custom Corner Radius</string>
+			<key>key</key>
+			<string>customCornerRadiusEnabled</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>key</key>
+			<string>cornerRadius</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<real>20</real>
+			<key>min</key>
+			<real>0</real>
+			<key>max</key>
+			<real>50</real>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== ICONS ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Icons</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Hide Dock Labels</string>
+			<key>key</key>
+			<string>hideLabels</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Icon Scale</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>key</key>
+			<string>iconScale</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<real>1</real>
+			<key>min</key>
+			<real>0.5</real>
+			<key>max</key>
+			<real>1.5</real>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== BEHAVIOR ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Behavior</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Disable Bounce Animation</string>
+			<key>key</key>
+			<string>disableBounce</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Hide Dock in Landscape</string>
+			<key>key</key>
+			<string>hideOnLandscape</string>
+			<key>defaults</key>
+			<string>com.minh.customdock</string>
+			<key>default</key>
+			<false/>
+			<key>PostNotification</key>
+			<string>com.minh.customdock.prefschanged</string>
+		</dict>
+
+		<!-- ======== ACTIONS ======== -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Reset to Defaults</string>
+			<key>action</key>
+			<string>resetDefaults</string>
 		</dict>
 		<dict>
 			<key>cell</key>
